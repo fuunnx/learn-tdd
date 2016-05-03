@@ -10,13 +10,16 @@
   },
   "devDependencies": {
     "istanbul": "^0.4.3",
+    "jsdoc": "^3.4.0",
     "qunit-tap": "^1.5.0",
     "qunitjs": "^1.23.1"
   },
   "scripts": {
     "test": "istanbul cover test.js",
     "open-coverage": "open ./coverage/lcov-report/index.html",
-    "start": "./node_modules/.bin/nodemon static-server.js"
+    "start": "./node_modules/.bin/nodemon static-server.js",
+    "docs": "./node_modules/jsdoc/jsdoc.js -c .jsdoc.conf.json change.js arrayOfSize.js",
+    "open-docs": "open ./out/global.html"
   },
   "author": "",
   "license": "MIT"
