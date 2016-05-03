@@ -1,5 +1,8 @@
 if (typeof module !== 'undefined' && module.exports) {
-  arrayOf = require('./arrayOfSize');  // allows CommonJS/Node.js require()
+  var QUnit = require('qunitjs');
+  var test = QUnit.test;
+  require('qunit-tap')(QUnit, console.log);
+  arrayOf = require('./arrayOfSize');
 }
 
 test('arrayOf(0) should return []', function(assert) {
