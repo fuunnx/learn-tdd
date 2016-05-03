@@ -1,26 +1,20 @@
 {
-  "name": "learn-tdd",
+  "name": "dwyl-learn-mocha",
   "version": "1.0.0",
   "description": "",
-  "main": "arrayOfSize.js",
-  "dependencies": {
-    "hapi": "^13.3.0",
-    "inert": "^3.2.0",
-    "nodemon": "^1.9.2"
-  },
-  "devDependencies": {
-    "istanbul": "^0.4.3",
-    "jsdoc": "^3.4.0",
-    "qunit-tap": "^1.5.0",
-    "qunitjs": "^1.23.1"
+  "main": "cash.js",
+  "directories": {
+    "test": "test"
   },
   "scripts": {
-    "test": "istanbul cover test.js",
-    "open-coverage": "open ./coverage/lcov-report/index.html",
-    "start": "./node_modules/.bin/nodemon static-server.js",
-    "docs": "./node_modules/jsdoc/jsdoc.js -c .jsdoc.conf.json change.js arrayOfSize.js",
-    "open-docs": "open ./out/global.html"
+    "test": "istanbul cover _mocha -- -R spec",
+    "docs": "jsdoc -c .jsdoc.conf.json cash.js utils.js"
   },
   "author": "",
-  "license": "MIT"
+  "license": "ISC",
+  "devDependencies": {
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "jsdoc": "^3.4.0"
+  }
 }
